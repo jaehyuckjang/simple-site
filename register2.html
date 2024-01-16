@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <img
+            src="https://pds.joongang.co.kr//news/component/htmlphoto_mmdata/201708/30/7cac0d5f-6f9f-44d2-880e-f2bfc06282aa.jpg"
+            alt
+            width="200px"
+            height="100px"
+        />
+        <form action="#" method="get">
+
+            <table style="border: 1px solid black;">
+                
+            <fieldset>
+                <legend>회원가입</legend>
+
+                <p>
+                    <label for="userid">아이디</label>
+                    <input
+                        type="text"
+                        id="userid"
+                        value=""
+                        name="userid"
+                        oninvalid="this.setCustomValidity('필수로 입력 필요합니다 ')"
+                        required
+                    />
+                </p>
+
+                <p>
+                    <label for="userpw">비밀번호</label>
+                    <input type="password" pattern="[a-z0-9]{8,}" id="userpw" 
+                    oninvalid="this.setCustomValidity('필수로 입력 필요합니다 ')"
+                    required />
+                </p>
+
+                <p>
+                    <label for="userpw">비밀번호 확인</label>
+                    <input type="password" pattern="[a-z0-9]{8,}" id="userpw" 
+                    oninvalid="this.setCustomValidity('필수로 입력 필요합니다 ')"
+                    required />
+                </p>
+
+                    <p>
+                        <label for="hangeul">한글 이름</label>
+                        <input type="text" 
+                        pattern="[가-힣]{2,4}" 
+                        id="hangeul"
+                        oninvalid="this.setCustomValidity('아이디를 입력하세요')"
+                        required autofocus />
+                    </p>
+
+                <p>
+                    <label for="birth">생년월일</label>
+                    <input
+                        type="text"
+                        id="birth"
+                        placeholder="6자리로 입력하세요"
+                        maxlength="6"
+                        oninvalid="this.setCustomValidity('필수로 입력 필요합니다')"
+                        required
+                    />
+                </p>
+
+                <P>
+                    <label for="ssn">주민등록번호</label>
+                    <input
+                        type="text"
+                        id="ssn"
+                        pattern="\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])"
+                    /> - 
+                    <input
+                        type="text"
+                        id="ssn"
+                        pattern="[1-8]\d{6}">
+                </p>
+
+                <p>
+                    <label for="phone">휴대전화번호</label>
+                    <input
+                        type="text"
+                        id="phone"
+                        pattern="01\d{1}-\d{4}-\d{4}"
+                    />
+                </p>
+
+                <p>
+                    <label for="age">나이</label>
+                    <input
+                        type="text"
+                        id="age"
+                        oninvalid="this.setCustomValidity('나이를 입력하세요')"
+                        required
+                    />
+                </p>
+                <p>
+                    <label for="useraddress">주소입력</label>
+                    <input type="address" id="useraddress" />
+                </p>
+                <p>
+                    <input type="radio" id="agree" name="delivery" />
+                    <label for="home">개인정보 수집 동의</label>
+                    <input type="radio" id="disagree" name="delivery" />
+                    <label for="company">개인정보 수집 미동의</label>
+                </p>
+                                <p>가입 경로</p>
+                <input type="text" list="route" name="route" />
+                <datalist id="route">
+                    <option value="blog">블로그</option>
+                    <option value="search">검색</option>
+                    <option value="sns">SNS</option>
+                    <option value="etc">기타</option>
+                </datalist>
+
+                직업
+                <select name="area" id="">
+                    <optgroup label="학생">
+                        <option value="gng">미취학</option>
+                        <option value="gsg">초중고등학생</option>
+                        <option value="gdg">대학생</option>
+                        <option value="gbg">대학원생</option>
+                    </optgroup>
+                    <optgroup label="일반인">
+                        <option value="sns">취준생</option>
+                        <option value="hns">직장인</option>
+                    </optgroup>
+                </select>
+<P>
+            <input type="submit" value="회원가입완료" onclick="alert('회원가입이 완료되었습니다.')"/>
+            <input type="reset" value="취소" />
+        </P>
+            </table>
+    </body>
+</html>
