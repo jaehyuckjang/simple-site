@@ -28,6 +28,7 @@
                         name="userid"
                         oninvalid="this.setCustomValidity('필수로 입력 필요합니다 ')"
                         required
+                        autofocus
                     />
                 </p>
 
@@ -51,7 +52,7 @@
                         pattern="[가-힣]{2,4}" 
                         id="hangeul"
                         oninvalid="this.setCustomValidity('아이디를 입력하세요')"
-                        required autofocus />
+                        required />
                     </p>
 
                 <p>
@@ -102,9 +103,9 @@
                     <input type="address" id="useraddress" />
                 </p>
                 <p>
-                    <input type="radio" id="agree" name="delivery" />
+                    <input type="radio" id="home" name="delivery" />
                     <label for="home">개인정보 수집 동의</label>
-                    <input type="radio" id="disagree" name="delivery" />
+                    <input type="radio" id="company" name="delivery" />
                     <label for="company">개인정보 수집 미동의</label>
                 </p>
                                 <p>가입 경로</p>
@@ -128,7 +129,19 @@
                         <option value="sns">취준생</option>
                         <option value="hns">직장인</option>
                     </optgroup>
+
                 </select>
+                <legend>관심분야 선택</legend>
+                <p>
+                    <input type="checkbox" id="interest1" />
+                    <label for="interest1">코딩</label>
+                    <input type="checkbox" id="interest2" />
+                    <label for="interest2">디자인</label>
+                    <input type="checkbox" id="interest3" />
+                    <label for="interest3">취업</label>
+                    <input type="checkbox" id="interest4" />
+                    <label for="interest4">기타</label>
+                </p>
 <P>
             <input type="submit" value="회원가입완료" onclick="alert('회원가입이 완료되었습니다.')"/>
             <input type="reset" value="취소" />
